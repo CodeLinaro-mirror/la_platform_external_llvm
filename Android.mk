@@ -1,3 +1,4 @@
+ifneq ($(BOARD_USE_QCOM_LLVM_CLANG_RS),true)
 LOCAL_PATH := $(call my-dir)
 LLVM_ROOT_PATH := $(LOCAL_PATH)
 LLVM_ENABLE_ASSERTION := false
@@ -69,3 +70,4 @@ subdirs += tools/llvm-link
 
 include $(LOCAL_PATH)/llvm.mk
 include $(addprefix $(LOCAL_PATH)/,$(addsuffix /Android.mk, $(subdirs)))
+endif
