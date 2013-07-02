@@ -88,7 +88,7 @@ include $(BUILD_HOST_EXECUTABLE)
 #===---------------------------------------------------------------===
 # llc command line tool (target)
 #===---------------------------------------------------------------===
-
+ifneq ($(call is-board-platform,msm8960),true)
 include $(CLEAR_VARS)
 
 LOCAL_MODULE := llc
@@ -123,3 +123,4 @@ include $(LLVM_ROOT_PATH)/llvm.mk
 include $(LLVM_DEVICE_BUILD_MK)
 include $(LLVM_GEN_INTRINSICS_MK)
 include $(BUILD_EXECUTABLE)
+endif
