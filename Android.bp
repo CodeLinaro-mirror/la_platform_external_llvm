@@ -200,10 +200,9 @@ llvm_aarch64_static_libraries = [
     "libLLVMAArch64Disassembler",
 ]
 
-cc_library {
+cc_library_shared {
     host_supported: true,
     name: "libLLVM_android",
-    vendor_available: true,
     defaults: [
         "llvm-defaults",
         "force_build_llvm_components",
