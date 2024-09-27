@@ -261,7 +261,6 @@ cc_library {
     name: "libLLVM_android",
     vendor_available: true,
     product_available: true,
-    sdclang: false,
     defaults: [
         "llvm-defaults",
         "force_build_llvm_components",
